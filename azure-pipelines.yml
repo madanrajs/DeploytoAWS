@@ -20,5 +20,11 @@ steps:
     templateFile: 'lambda_apigateway_cft.json'
     s3BucketName: 'aws-sam-cli-managed-default-samclisourcebucket-10sp2ssea4mnt'
     templateParametersSource: 'inline'
-    templateParameters: '--capabilities CAPABILITY_IAM'
+    templateParameters: |
+      [
+      {
+      "ParameterKey": "capabilities", "ParameterValue": "CAPABILITY_IAM"
+      
+      }
+      ]
     capabilityAutoExpand: true
