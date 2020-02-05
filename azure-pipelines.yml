@@ -15,7 +15,7 @@ steps:
   inputs:
     awsCredentials: 'AWSAdminCred'
     regionName: 'ap-southeast-2'
-    stackName: 'cft-two'
+    stackName: 'cft-one'
     templateSource: 'file'
     templateFile: 'lambda_apigateway_cft.json'
     s3BucketName: 'aws-sam-cli-managed-default-samclisourcebucket-10sp2ssea4mnt'
