@@ -6,19 +6,39 @@
 trigger:
 - master
 
-jobs:
-- job: myJob1
-  timeoutInMinutes: 10
-  pool:
-    vmImage: 'ubuntu-16.04'
-  steps:
-  - script: echo Hello, world!
-    displayName: 'Run a one-line script'
+stages:
+- stage: mystage1
+  jobs:
+  - job: myJob11
+    timeoutInMinutes: 10
+    pool:
+      vmImage: 'ubuntu-16.04'
+    steps:
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script'
 
-- job: myJob2
-  timeoutInMinutes: 10
-  pool:
-    vmImage: 'ubuntu-16.04'
-  steps:
-  - script: echo Hello, world!
-    displayName: 'Run a one-line script'
+  - job: myJob12
+    timeoutInMinutes: 10
+    pool:
+      vmImage: 'ubuntu-16.04'
+    steps:
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script'
+
+- stage: mystage2
+  jobs:
+  - job: myJob21
+    timeoutInMinutes: 10
+    pool:
+      vmImage: 'ubuntu-16.04'
+    steps:
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script'
+
+  - job: myJob22
+    timeoutInMinutes: 10
+    pool:
+      vmImage: 'ubuntu-16.04'
+    steps:
+    - script: echo Hello, world!
+      displayName: 'Run a one-line script'
