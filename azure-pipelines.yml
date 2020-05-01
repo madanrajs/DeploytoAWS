@@ -6,11 +6,11 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-16.04'
-  
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-
+jobs:
+- job: myJob
+  timeoutInMinutes: 10
+  pool:
+    vmImage: 'ubuntu-16.04'
+  steps:
+  - script: echo Hello, world!
+    displayName: 'Run a one-line script'
